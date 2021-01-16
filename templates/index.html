@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict The chance of Affair</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <h2> Select any one occupation by taking value as 1</h2>
+            <br><br>
+            <input  type="number"  name="occ_1" id="occ_1"  min="0" max="1" style="width: 3em;">student
+            <input  type="number"  name="occ_2" id="occ_2"  min="0" max="1" style="width: 3em;">farming
+            <input  type="number"  name="occ_3" id="occ_3"  min="0" max="1" style="width: 3em;">white collar
+            <input type="number"   name="occ_4" id="occ_4"   min="0" max="1" style="width: 3em;">technician
+            <input type="number"   name="occ_5" id="occ_5"   min="0" max="1" style="width: 3em;">managerial
+            <input type="number"   name="occ_6" id="occ_6"   min="0" max="1" style="width: 3em;">advanced degree
+                <h2> Select any one husband's occupation as bt taking value as 1 </h2>
+            <br><br>
+            <input type="number" name="occ_husb_2" id="occ_husb_2"  min="0" max="1" style="width: 3em;" >"farming"
+            <input type="number" name="occ_husb_3" id="occ_husb_3"   min="0" max="1" style="width: 3em;" >white collar
+            <input type="number" name="occ_husb_4" id="occ_husb_4"   min="0" max="1" style="width: 3em;" >technician
+            <input type="number" name="occ_husb_5" id="occ_husb_5"   min="0" max="1" style="width: 3em;">managerial
+            <input type="number" name="occ_husb_6" id="occ_husb_6"  min="0" max="1" style="width: 3em;">advanced degree
+            <br><br>
+
+             <input type="number" name="rate_marriage" id="rate_marriage" placeholder="rate_marriage"  min="0" max="5" step="any">
+            <br>
+            <input type="number" name="age" id="age" placeholder="age" min="20" max="60">
+                <br>
+            <input type="number" name="yrs_married" id="yrs_married" placeholder="yrs_married">
+                <br>
+            <input type="number" name="children" id="children" placeholder="children">
+                <br>
+            <input type="number" name="religious" id="religious" placeholder="religious" min="0" max="5" step="any">
+                <br>
+            <input type="number" name="educ" id="educ" placeholder="educ">
+                <br>
+
+
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
