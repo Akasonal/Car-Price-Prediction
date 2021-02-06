@@ -12,32 +12,31 @@
 
     <div class="form">
         <form action="/predict" method="POST">
-            <h2> Original showroom cost currently</h2>
-            <input type="number" name="Present_Price" id="Present_Price" placeholder="Present_Price"  step="any">Lakh
+            <h5> Original showroom cost currently</h5>
+            <input type="number" name="Present_Price" id="Present_Price" placeholder="Present_Price"  step="any" style="width: 4em">Lakh
                 <br>
-            <h2> Total km you have driven the car</h2>
-            <input type="number" name="Kms_Driven" id="Kms_Driven" placeholder="Kms_Driven" step="any">km
+            <h5> Total km car has been driven </h5>
+            <input type="number" name="Kms_Driven" id="Kms_Driven" placeholder="Kms_Driven" step="any" style="width: 5em">km
                 <br>
-            <h2>Is the car used by single person or multiple person</h2>
-            <input type="number" name="Owner" id="Owner" placeholder="Owner" min="0" max="3">
+            <h5>Is the car owned by single person or multiple person </h5>
+            <input type="number" name="Owner" id="Owner" placeholder="Owner" min="1" max="3" style="width: 4em">owner
                 <br>
             <h2>Number of Years you have used the car</h2>
-            <input type="number" name="No_of_years" id="No_of_years" placeholder="No_of_years" min="0" max="12" step="any">
+            <input type="number" name="No_of_years" id="No_of_years" placeholder="Year" min="0" max="12" step="any" style="width: 4em">years
                 <br>
             <br>
-            <h2>Choose any one of them as one and rest as zero</h2>
-  <select name="Diesel" id="Fuel_Type_Diesel"  style="width: 6em">
-            <option value="1">Yes</option>
-                <option value="">NO</option>
-            </select>
-             <select naME="Petrol" id="Fuel_Type_Petrol"  style="width: 6em">
+            <h5>Choose any one of them as one and rest as zero</h5>
+            <select name="Diesel" id="Fuel_Type_Diesel"  style="width: 4em">Diesel
             <option value="1">Yes</option>
                 <option value="0">NO</option>
             </select>
-            <br>
+             <select name="Petrol" id="Fuel_Type_Petrol"  style="width: 5em">Petrol
+             <option value="1">Yes</option>
+             <option value="0">NO</option>
+            </select>
             <br>
             <h2>Is Transmission automatic or manual</h2>
-             <select name="Transmission_Manual" id="Transmission_Manual">
+             <select name="Transmission_Manual" id="Transmission_Manual">Mannual
             <option value="1">Yes</option>
                 <option value="0">NO</option>
             </select>
